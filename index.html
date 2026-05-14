@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Health Report</title>
 
     <!-- PDF LIB -->
@@ -13,11 +13,7 @@
         rel="stylesheet">
 
     <style>
-        @media screen and (max-width:768px;){
-            #content{width:100%}
-            img{width:100%;}
-            .info{width:100%;}
-        }
+       
         @media print{
           @page{  size:A4;
             margin:25mm;}
@@ -105,6 +101,28 @@
             border-radius: 6px;
             font-size: 13px;
             cursor: pointer;
+        }
+        /* MOBILE */
+        @media(max-width:768px) {
+
+            .info {
+                margin: 10px;
+                padding-top: 60px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pdf {
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                width: auto;
+                font-size: 12px;
+                padding: 7px 12px;
+            }
+
         }
 
         /* CONTENT EXPORT */
