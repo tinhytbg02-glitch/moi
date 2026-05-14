@@ -16,7 +16,7 @@
         @media print{
           hr{  boder:none;
             margin-top:20px;
-            margin-bot:20px:}
+            margin-bot:20mm:}
         }
         body {
             margin: 0;
@@ -254,7 +254,7 @@
                 const element = document.getElementById("content");
 
                 return html2pdf().set({
-                    margin: [7,0,7,0],
+                    margin: [6,0,10,0],
                     filename: 'health_report.pdf',
                     image: { type: 'jpeg', quality: 1 },
                     html2canvas: {
