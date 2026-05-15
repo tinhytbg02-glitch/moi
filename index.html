@@ -13,14 +13,13 @@
         rel="stylesheet">
 
     <style>
-     @media print {
+        @media print {
             @page {
                 size: A4;
                 margin: 25mm;
             }
 
         }
-  
 
         body {
             margin: 0;
@@ -126,7 +125,7 @@
 
         .container {
             text-align: center;
-            margin:  0;
+            margin: 20px 0;
         }
 
         .img-2 {
@@ -172,26 +171,6 @@
         .noi {
             margin: 0;
         }
-        @media(max-width:768px{
-            .info {
-            margin: 12px;
-            border: 3px solid #49bcd3;
-            background: #fff;
-            padding: 12px;
-            position: relative;
-            width:190%;
-            margin: 12px auto;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px 15px;
-            width:190%;
-        }
-        }
-
-            
     </style>
 </head>
 
@@ -281,7 +260,7 @@
                 const element = document.getElementById("content");
 
                 return html2pdf().set({
-                    margin: [10,0,10,0],
+                    margin: [7, 0, 7, 0],
                     filename: 'health_report.pdf',
                     image: { type: 'jpeg', quality: 1 },
                     html2canvas: {
