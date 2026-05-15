@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Report</title>
 
     <!-- PDF LIB -->
@@ -13,12 +13,14 @@
         rel="stylesheet">
 
     <style>
-       
-        @media print{
-          @page{  size:A4;
-            margin:25mm;}
-            
+        @media print {
+            @page {
+                size: A4;
+                margin: 25mm;
+            }
+
         }
+
         body {
             margin: 0;
             font-family: 'Noto Sans KR', sans-serif;
@@ -56,7 +58,7 @@
         }
 
         /* BOX INFO */
-     .info {
+        .info {
             margin: 12px;
             border: 3px solid #49bcd3;
             background: #fff;
@@ -101,15 +103,7 @@
             border-radius: 6px;
             font-size: 13px;
             cursor: pointer;
-        }  
-      
-        
-        /* MOBILE */
-       @media(max-width:768px){}
-
-   
-
-        
+        }
 
         /* CONTENT EXPORT */
         #content {
@@ -131,7 +125,7 @@
 
         .container {
             text-align: center;
-            margin:  0;
+            margin: 20px 0;
         }
 
         .img-2 {
@@ -233,17 +227,18 @@
     <div id="content">
 
         <div class="container">
-         <div class="page page-break">
-            <div class="noi">
-                <img src="anh1.png" class="img-2">
+            <div class="page page-break">
+                <div class="noi">
+                    <img src="anh1.png" class="img-2">
 
 
-                <img src="anh2.png" class="img-2">
-         </div>
-         </div>
+                    <img src="anh2.png" class="img-2">
+
+                </div>
+            </div>
             <img src="anh3.png" class="img-2">
-         
-     </div>
+
+        </div>
     </div>
 
 </body>
@@ -265,7 +260,7 @@
                 const element = document.getElementById("content");
 
                 return html2pdf().set({
-                    margin: [6,0,10,0],
+                    margin: 0,
                     filename: 'health_report.pdf',
                     image: { type: 'jpeg', quality: 1 },
                     html2canvas: {
@@ -288,7 +283,5 @@
             });
     }
 </script>
-
-
 
 </html>
