@@ -126,7 +126,7 @@
 
         .container {
             text-align: center;
-            margin: 5px 0;
+            margin:  0;
         }
 
         .img-2 {
@@ -261,7 +261,7 @@
                 const element = document.getElementById("content");
 
                 return html2pdf().set({
-                    margin: [10,10,10,0],
+                    margin: [12,0,10,0],
                     filename: 'health_report.pdf',
                     image: { type: 'jpeg', quality: 1 },
                     html2canvas: {
